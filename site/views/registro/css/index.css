@@ -1,0 +1,18 @@
+.margin-top {
+	margin-top: 2%;
+}
+.formulario_contacto {
+	box-shadow: 1px 1px 5px 1px gray;
+	padding: 13px;
+	color: #233354;
+	font-weight: bold;
+}
+
+.top-carga {
+  padding-top: 67px;
+}
+
+.titulo-formulario {
+	font-size: 20px;
+	margin-bottom: 24px;
+}

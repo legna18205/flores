@@ -1,0 +1,71 @@
+.menu_repor {
+	width: 26%;
+	background-color: #d1d1d1;
+	min-height: 72px;
+	border-radius: 5px;
+	padding: 12px;
+	border: 1px solid #1a1a1a;
+	float: left;
+}
+#tipopo {
+	text-align: center;
+	font-size: 19px;
+	margin-bottom: 50px;
+}
+.enlace_repor {
+	width: 100%;
+	background-color: #6e75ff;
+	border-radius: 5px;
+	margin-bottom: 5px;
+	color: beige;
+	padding-left: 14px;
+	border: 1px solid black;
+	font-size: large;
+}
+.enlace_repor:hover {
+	background-color: rgba(110, 117, 255, 0.37);
+	color: black;
+	cursor: pointer;
+}
+.area_campo {
+	float: left;
+	width: 70%;
+	min-height: 300px;
+	background-color: rgba(212, 212, 212, 0.71);
+	margin-left: 5px;
+	border: 1px solid black;
+	border-radius: 5px;
+	padding: 17px;
+}
+#contenido {
+	width: 100%;
+	padding: 20px;
+}
+input{
+
+	width: 75% !important;
+
+}
+label {
+
+	width: 25% !important;
+}
+.btn-success {
+	color: #fff;
+	background-color: #406dc8;
+	border-color: RGBA(29, 77, 150, 0.8);
+	margin: 5px;
+}
+#mensjj {
+	color: #000051;
+	font: 15px justific;
+	/* border: 1px solid; */
+	padding: 5px;
+	border-radius: 5px;
+}
+#contenido > p:nth-child(1) {
+	text-align: center;
+	/* font: 20px; */
+	font-size: 20px !important;
+	font-style: italic;
+}
