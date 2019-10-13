@@ -16,7 +16,10 @@ abstract class Controller
     
     public function __construct() {
         $this->_view = new View(new Request);
-       
+
+        $this->_modelo=$this->loadModel('galeria');
+        $this->_view->menus=$this->_modelo->sub_menu();
+        //print_r($this->_view);
     }
     
     abstract public function index();

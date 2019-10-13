@@ -17,13 +17,15 @@ define('APP_NAME', 'pruba');
 define('APP_SLOGAN', 'default');
 define('APP_COMPANY', 'default');
 define('APP_TLF', '');
-define('APP_EMAIL', '');
+define('APP_EMAIL', 'legna18205@gmail.com');
+define('TELEFONO', '+56 123456789');
+define('DIRECCION', 'Ongolmo 593-481 Concepción Región del Bío Bío');
 define('SESSION_TIME', 1000000);
 define('HASH_KEY', '4f6a6d832be79');
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
 define('DB_PASS', '');
-define('DB_NAME', 'frame');
+define('DB_NAME', 'flores');
 define('DB_CHAR', 'utf8');
 
 

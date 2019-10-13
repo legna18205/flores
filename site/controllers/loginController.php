@@ -50,87 +50,14 @@ class loginController extends Controller{
         $this->_view->renderizar('index');
         
     }
-    
-    public function login_google(){
-       // echo json_encode($_GET);
-        $row = $this->_login->getUsuario_google(
-                    $_POST['email']                    
-                    );
 
-
-        if(!$row){
-                $newpass=uniqid();
-                $corte = explode("@", $_POST['email']);
-                $login=$corte[0];
-                $this->_login->registrarUsuario(
-                    $_POST['foto'],
-                    $_POST['email'],
-                    $_POST['nombre'],
-                    $newpass, 
-                    $login                   
-                    );
-                $this->email($_POST['email'],$_POST['nombre'],'Google',$newpass,$login);
-            }
-                $imagen = file_get_contents($_POST['foto']);
-                $url='public/img/profile/'.$_POST['email'].'.jpg';
-                //echo $url;
-                file_put_contents($url, $imagen);
-                    
-
-                    $this->_login->actualizar_foto_google(
-                    $url,
-                    $_POST['email']                    
-                    );
-        $row = $this->_login->getUsuario_google(
-                    $_POST['email']                    
-                    );
-            
-            
-
-
-
-            echo json_encode($row);
-            Session::set('autenticado', true);
-            Session::set('role', $row['id_role']);
-            Session::set('email', $row['email']);
-            Session::set('usuario', $row['login']);
-            Session::set('foto', $row['foto']);
-            Session::set('id_usuario', $row['id_usuario']);
-            Session::set('tiempo', time());
-    }
-    
 
     public function cerrar(){
         Session::destroy();
         $this->redireccionar('login');
     }
 
-    public function email($email,$nombre,$tipo,$clave,$login){
-            
-            //configuracion del servidor de correo///
-            $this->getLibrary('class.phpmailer');
-            $mail = new PHPMailer();
-            $mail->IsSMTP(); 
-            $mail->SMTPDebug  = 1;                   
-            $mail->SMTPAuth   = true; 
-            $mail->SMTPSecure = "tls";               
-            $mail->Host       = "smtp.gmail.com";
-            //datos del servidor de email
-            $mail->Username   = "prccnoreply@gmail.com";       
-            $mail->Password   = "20574205";        
-            $mail->SetFrom('prccnoreply@gmail.com');
-            $mail->AddReplyTo("prccnoreply@gmail.com","prcc");
-            //asunto    
-            $mail->Subject = 'Recuperacion de cuenta de usuario';
-            //mensaje
-            $mail->Body = 'Hola ' . $nombre . ',' .
-                            ' Se le ha creado una cuenta en PropiedadesYa como '.$login.' por medio de '.$tipo.' su clave ' .
-                            'es la siguiente:' . $clave;
 
-            $mail->AddAddress($email);
-            
-            $mail->Send();
-    }
 }
 
 ?>

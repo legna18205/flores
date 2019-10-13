@@ -1,5 +1,13 @@
 
-</div>
+  <div class="footer py-4">
+    <div class="container-fluid">
+      <p>
+      <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+      Copyright &copy;<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear());</script> All rights reserved | gerberafloreria@gmail.com <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+      <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+      </p>
+    </div>
+  </div>
 
 		<script src="<?php echo BASE_URL; ?>public/js/config.js" type="text/javascript"></script>
 		<script src="<?php echo $_layoutParams['ruta_js']; ?>core.min.js"></script>

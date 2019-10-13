@@ -70,62 +70,78 @@
     <header class="site-navbar py-3" role="banner">
 
       <div class="container-fluid">
-        <div class="row align-items-center">
+        <div class="row align-items-center justify-content-between">
           
-          <div class="col-6 col-xl-2" data-aos="fade-down">
-            <h1 class="mb-0"><a href="index.html" class="text-black h2 mb-0">Photon</a></h1>
+          <div class="col-2 " data-aos="fade-down">
+            <h1 class="mb-0">
+              <a href="<?php echo BASE_URL; ?>" class="text-black h2 mb-0">
+              <img src=" <?php echo BASE_URL ?>public/img/logos/logo.gif " style="width: 30%;">
+              
+              </a></h1>
           </div>
-          <div class="col-10 col-md-8 d-none d-xl-block" data-aos="fade-down">
+          <div class="col-6  d-none d-xl-block" data-aos="fade-down">
             <nav class="site-navigation position-relative text-right text-lg-center" role="navigation">
 
               <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
-                <li class="active"><a href="index.html">Home</a></li>
+              
                 <li class="has-children">
-                  <a href="single.html">Gallery</a>
+                  <a href="#">Secciones</a>
                   <ul class="dropdown">
-                    <li><a href="#">Nature</a></li>
-                    <li><a href="#">Portrait</a></li>
-                    <li><a href="#">People</a></li>
-                    <li><a href="#">Architecture</a></li>
-                    <li><a href="#">Animals</a></li>
-                    <li><a href="#">Sports</a></li>
-                    <li><a href="#">Travel</a></li>
+                 
                     <li class="has-children">
-                      <a href="#">Sub Menu</a>
+                      <a href="#">categorias</a>
                       <ul class="dropdown">
-                        <li><a href="#">Menu One</a></li>
-                        <li><a href="#">Menu Two</a></li>
-                        <li><a href="#">Menu Three</a></li>
+                        <?php for ($i=0; $i < count($this->menus) ; $i++): ?>
+                        <li><a href="<?php echo BASE_URL; ?>galeria/index/<?php echo $this->menus[$i]['titulo']; ?>"><?php echo $this->menus[$i]['titulo'] ?></a></li>
+                        <?php endfor; ?>
+                        
                       </ul>
                     </li>
                   </ul>
                 </li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                
+                <li><a href="<?php echo BASE_URL ?>nosotros">Nosotros</a></li>
+                <li><a href="<?php echo BASE_URL ?>contacto">contactanos</a></li>
+                 <?php if(Session::get('autenticado')==true):?>
+                <li class="dropdown">
+                  <a href="#" class=" dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ADMIN <span class="icon-user"></span></a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                       <a class="dropdown-item" href="<?php echo BASE_URL; ?>perfil/" >Perfil</a>
+                                    <a class="dropdown-item" href="<?php echo BASE_URL; ?>recuperar/cambiar">Cambiar Contraseña</a>
+                                    
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="<?php echo BASE_URL; ?>login/cerrar">Cerrar Sesión</a>
+                                  
+
+                    </div>
+                </li>
+                <?php endif; ?>
               </ul>
             </nav>
           </div>
 
-          <div class="col-6 col-xl-2 text-right" data-aos="fade-down">
+          <div class="col-4  text-right" data-aos="fade-down">
             <div class="d-none d-xl-inline-block">
               <ul class="site-menu js-clone-nav ml-auto list-unstyled d-flex text-right mb-0" data-class="social">
+                
+               
+
+
+
                 <li>
-                  <a href="#" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
+                  <a href="https://www.facebook.com/legna18205" target="_blank" class="pl-3 pr-3"><span class="icon-facebook"></span></a>
                 </li>
                 <li>
-                  <a href="#" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
+                  <a href="https://www.instagram.com/?hl=es-la" target="_blank" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
                 </li>
                 <li>
-                  <a href="#" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
+                  <a href="https://www.matrimonios.cl" target="_blank" class="pl-3 pr-3"><span class="icon-pagelines"></span></a>
                 </li>
-                <li>
-                  <a href="#" class="pl-3 pr-3"><span class="icon-youtube-play"></span></a>
-                </li>
+                
               </ul>
             </div>
 
-            <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+            <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" ><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
 
           </div>
 

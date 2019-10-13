@@ -1,46 +1,52 @@
 
-  <div class="container top-carga">
- 
-<div class="col-12">
-<div class="text-uppercase font-weight-bold wow-outer tituloo tx linea">CAMBIO DE CONTRASEÑA</div>
-
-
-
-
-
-
- <div class="col-md-8 offset-md-2">
-
-
-           <div class="form-group ">
-              <label class="control-label">CONTRASEÑA ACTUAL</label>
-              
-                <input type="password" type="text" class="form-control" id="actual" name="actual" required="required">
-              
+<div class="container-fluid cambio" data-aos="fade" data-aos-delay="500">
+  <div class="row justify-content-center">
+    <div class="col-8">
+      <h3 class="text-center">Cambio de contraceña</h3>
+    </div>
+    <div class="col-8">
+      
+        <div class="input-group mb-3">
+          <font class="col-2 align-items-center">clave actual</font>
+          <div class=" input-group-prepend">
+            <span class="input-group-text icon-lock" id="basic-addon1">
+             
+            </span>
           </div>
-          <div class="form-group">
-              <label class=" control-label">CONTRASEÑA NUEVA</label>
-            
-                <input type="password" type="text" class="form-control" id="nueva" name="nueva" required="required">
-              
+          <input  class="form-control" placeholder="clave actual" aria-describedby="basic-addon1" type="password" id="actual" name="actual" required="required">
+        </div>
+
+        <div class="input-group mb-3">
+          <font class="col-2 align-items-center">clave nueva</font>
+          <div class="input-group-prepend">
+            <span class="input-group-text icon-lock" id="basic-addon1">
+             
+            </span>
           </div>
-          <div class="form-group ">
-              <label class=" control-label">CONFIRMAR CONTRASEÑA</label>
+          <input  class="form-control" placeholder="clave nueva" aria-describedby="basic-addon1" type="password" id="nueva" name="nueva" required="required">
+        </div>
+
+        <div class="input-group mb-3">
+          <font class="col-2 align-items-center">repita clave</font>
+          <div class="input-group-prepend">
+            <span class="input-group-text icon-lock" id="basic-addon1">
+             
+            </span>
+          </div>
+          <input  class="form-control" placeholder="repita clave" aria-describedby="basic-addon1" type="password" id="confirmar" name="confirmar" required="required">
+        </div>
+
+        <div class="input-group mb-3 justify-content-around">
+            <button id="cambiarclave" type="button" class="btn btn-primary btn-md col-4">CAMBIAR CLAVE</button>
+            <button onclick="javascript:history.back()" class="btn btn-primary btn-md col-4">CANCELAR</button>
           
-                <input type="password" type="text" class="form-control" id="confirmar" name="confirmar" required="required">
-              
-          </div>
-            <div class="form-group ">
-              <button id="cambiarclave" type="button" class="btn btn-primary btn-sm">CAMBIAR CLAVE</button>
-            <button onclick="javascript:history.back()" class="btn btn-primary btn-sm">CANCELAR</button>
-
-          </div>
-    
-</div>
-<div class="col-xs-2 col-sm-4 col-md-4 col-lg-4">
-<img src="<?php echo BASE_URL?>/public/img/llave.png" alt=" ">
-</div>
+        </div>
 
 
+    </div>
+  </div>
 </div>
-</div>
+
+        
+
+

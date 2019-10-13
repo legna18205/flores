@@ -66,7 +66,7 @@ $( document ).on( "click", "#cambiarclave", function() {
 				if(!datos){
 
 
-					alertify.alert("Clave ACtual Incorrecta");
+					
 				}
 				else {
 			
