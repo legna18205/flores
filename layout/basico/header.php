@@ -85,11 +85,11 @@
               <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
               
                 <li class="has-children">
-                  <a href="#">Secciones</a>
+                  <a href="<?php echo BASE_URL ?>">Secciones</a>
                   <ul class="dropdown">
                  
                     <li class="has-children">
-                      <a href="#">categorias</a>
+                      <a href="<?php echo BASE_URL ?>">Categorias</a>
                       <ul class="dropdown">
                         <?php for ($i=0; $i < count($this->menus) ; $i++): ?>
                         <li><a href="<?php echo BASE_URL; ?>galeria/index/<?php echo $this->menus[$i]['titulo']; ?>"><?php echo $this->menus[$i]['titulo'] ?></a></li>
@@ -106,7 +106,7 @@
                 <li class="dropdown">
                   <a href="#" class=" dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ADMIN <span class="icon-user"></span></a>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                       <a class="dropdown-item" href="<?php echo BASE_URL; ?>perfil/" >Perfil</a>
+                       <a class="dropdown-item" href="<?php echo BASE_URL; ?>publicar/" >Agregar publicaciones</a>
                                     <a class="dropdown-item" href="<?php echo BASE_URL; ?>recuperar/cambiar">Cambiar Contraseña</a>
                                     
                                     <div class="dropdown-divider"></div>
@@ -129,10 +129,10 @@
 
 
                 <li>
-                  <a href="https://www.facebook.com/legna18205" target="_blank" class="pl-3 pr-3"><span class="icon-facebook"></span></a>
+                  <a href="https://es-la.facebook.com/pages/category/Patio-Garden/Floreria-Gerbera-1972023626419432/" target="_blank" class="pl-3 pr-3"><span class="icon-facebook"></span></a>
                 </li>
                 <li>
-                  <a href="https://www.instagram.com/?hl=es-la" target="_blank" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
+                  <a href="https://www.instagram.com/gerberafloreria/" target="_blank" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
                 </li>
                 <li>
                   <a href="https://www.matrimonios.cl" target="_blank" class="pl-3 pr-3"><span class="icon-pagelines"></span></a>

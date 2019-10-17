@@ -8,12 +8,16 @@ $(document).ready(function(){
 				lname:$("#lname").val(),
 				email:$("#email").val(),
 				subject:$("#subject").val(),
+				fono:$("#fono").val(),
 				message:$("#message").val()
 			}, 
 			function(data, textStatus, xhr) {
 			console.log(data);
 			console.log(textStatus);
 			console.log(xhr);
+			if (textStatus) {
+				window.location=base_url;
+			}
 		});
 	});
 

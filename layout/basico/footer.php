@@ -9,11 +9,14 @@
     </div>
   </div>
 
+		
+		
 		<script src="<?php echo BASE_URL; ?>public/js/config.js" type="text/javascript"></script>
 		<script src="<?php echo $_layoutParams['ruta_js']; ?>core.min.js"></script>
 		<script src="<?php echo $_layoutParams['ruta_js']; ?>jquery-3.3.1.min.js"></script>
 		<script src="<?php echo $_layoutParams['ruta_js']; ?>jquery-migrate-3.0.1.min.js"></script>
 		<script src="<?php echo $_layoutParams['ruta_js']; ?>jquery-ui.js"></script>
+		
 		<script src="<?php echo $_layoutParams['ruta_js']; ?>popper.min.js"></script>
 		<script src="<?php echo $_layoutParams['ruta_js']; ?>bootstrap.min.js"></script>
 		<script src="<?php echo $_layoutParams['ruta_js']; ?>owl.carousel.min.js"></script>
@@ -35,7 +38,6 @@
 		$('#lightgallery').lightGallery();
 		});
 		</script>
-
 
 
 

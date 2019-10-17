@@ -18,7 +18,7 @@ define('APP_SLOGAN', 'default');
 define('APP_COMPANY', 'default');
 define('APP_TLF', '');
 define('APP_EMAIL', 'legna18205@gmail.com');
-define('TELEFONO', '+56 123456789');
+define('TELEFONO', '+56 998946326');
 define('DIRECCION', 'Ongolmo 593-481 Concepción Región del Bío Bío');
 define('SESSION_TIME', 1000000);
 define('HASH_KEY', '4f6a6d832be79');
