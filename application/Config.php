@@ -17,7 +17,7 @@ define('APP_NAME', 'pruba');
 define('APP_SLOGAN', 'default');
 define('APP_COMPANY', 'default');
 define('APP_TLF', '');
-define('APP_EMAIL', 'legna18205@gmail.com');
+define('APP_EMAIL', 'gerberafloreria@gmail.com');
 define('TELEFONO', '+56 998946326');
 define('DIRECCION', 'Ongolmo 593-481 Concepción Región del Bío Bío');
 define('SESSION_TIME', 1000000);

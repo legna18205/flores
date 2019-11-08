@@ -1,32 +1,20 @@
-"use strict";
+function filePreview(input) {
 
-Dropzone.autoDiscover = false;
+    var html='';
+    if (input.files && input.files[0]) {
+        for (var i = 0; i < input.files.length; i++) {
+           
+        var reader = new FileReader();
+        reader.onload = function (e) {
+            
+            html+='<div class="col-2 " ><img src="'+e.target.result+'" class="img-thumbnail" /></div>';
+            $('#mini').html(html);
+        }
+        reader.readAsDataURL(input.files[i]);
+        }
+    }
+}
 
-	$("#carga-img").Dropzone({ 
-		url: base_url+'flores/publicar/upfile',
-		autoProcessQueue:false,
-		parallelUploads: 7,
-		uploadMultiple: true
-	});
-
-$('#btn_enviar').click(function() {
-	
-    var myDropzone = Dropzone.forElement(".dropzone");
-
-
-    myDropzone.on('sending', function(file, xhr, formData){
-
-
- 
-    	formData.append('titulo',$('#titulo').val());
-    	formData.append('descrip',$('#descrip').val());
-    	formData.append('categ',$('#categ').val());
-
-	});
-	 
-    myDropzone.processQueue();
-    myDropzone.on('success', function(){
-     // $(".loader").fadeIn("slow");
-   // window.location.href=base_url+'listar/index/'+$("#email-usuario").val();
-    });
+$("#fotos").change(function () {
+    filePreview(this);
 });

@@ -1,0 +1,23 @@
+#lg-download{
+	display: none !important;
+}
+#lg-share{
+	display: none !important;
+}
+#lg-actual-size{
+	display: none !important;
+}
+.x {
+	position: absolute;
+	right: 25px;
+	color: blue;
+	cursor: pointer;
+	z-index: 1000;
+	width: 10px;
+	height: 10px;
+	top: -25px;
+}
+.x:hover {
+	
+	color: red;
+}

@@ -29,7 +29,14 @@ class GaleriaModel extends Model{
         return $datos->fetchall(PDO::FETCH_ASSOC);
 
 	}
+	public function eliminar($id){
 
+	 echo  $sql="delete from fotos where id_fotos='$id'";
+
+		 $this->_db->query($sql);        
+       
+
+	}
 
 
 

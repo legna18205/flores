@@ -18,43 +18,6 @@ class View
         $this->_args = $peticion->getArgs();
    
 
-$curl = curl_init();
-curl_setopt($curl, CURLOPT_URL, "http://larrainvial.finmarketslive.cl/www/index.html?mercado=chile");
-curl_setopt($curl, CURLOPT_POSTFIELDS, "");
-curl_setopt($curl, CURLOPT_PORT, '80');
-
-curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
-curl_setopt($curl, CURLOPT_FOLLOWLOCATION, 1);
-curl_setopt($curl, CURLOPT_AUTOREFERER, 1);
-curl_setopt($curl, CURLOPT_USERAGENT, "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36");
-curl_setopt($curl, CURLOPT_CONNECTTIMEOUT, 30);
-curl_setopt($curl, CURLOPT_TIMEOUT, 30);
-curl_setopt($curl, CURLOPT_HEADER, 'Content-Type: application/html');
-curl_setopt($curl, CURLOPT_SSLVERSION, 3); 
-curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, FALSE);
-curl_setopt($curl, CURLOPT_MAXREDIRS, 10);
-$response   = curl_exec($curl);
-$curl_errno = curl_errno($curl);
-$array=explode("<th>Indicadores</th>",$response);
-$corte=explode('UF',$array[1]);
-$corte=explode('+',$corte[1]);
-curl_close($curl);
-
-$uf = str_replace('.', '', $corte[0]);
-$uf = str_replace("," , ".", $uf);
-$uf = str_replace(" ", '', $uf);
-$uf = str_replace("</span>", '', $uf);
-$uf = str_replace("</td>", '', $uf);
-$uf = str_replace("<td>", '', $uf);
-$uf = str_replace('<spandata-bind="text:price">', '', $uf);
-$uf = str_replace('<spanclass="varpos-var"data-bind="text:performance_pct,style:{color:color,background:background}">', '', $uf);
-
-
-
- 
-$sin_espacios_en_blanco=trim($uf);
-$this->uf = (float) $sin_espacios_en_blanco;
-
 
 
 

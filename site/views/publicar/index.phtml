@@ -3,31 +3,48 @@
   <h2 class="mb-3 text-center">Publicar nuevo contenido</h2>
   <div class="row justify-content-center">
 
-    <form class="col-8">
+    <form class="col-8" method="post" action="<?php echo BASE_URL ?>publicar/upfile" enctype="multipart/form-data">
+
       <div class="form-group">
         <label for="titulo">Titulo</label>
-        <input type="text" class="form-control" id="titulo" aria-describedby="titulo" placeholder="Titulo de la publicacion">
+        <input type="text" class="form-control" id="titulo" required aria-describedby="titulo" name="titulo" placeholder="Titulo de la publicacion">
         <small id="titulo" class="form-text text-muted">Inserte un titulo para la nueva publicacion</small>
       </div>
       <div class="form-group">
         <label for="descrip">Descripcion</label>
-        <textarea class="form-control" id="descrip" aria-describedby="descrip" placeholder="Descripcion"></textarea>
+        <textarea class="form-control" id="descrip" aria-describedby="descrip" name="descrip" placeholder="Descripcion" required></textarea>
         <small id="descrip" class="form-text text-muted">Descripcion de la publicacion.</small>
       </div>
       <div class="form-group">
+    
         <label for="categ">Categoria</label>
-        <select type="text" class="form-control" id="categ" aria-describedby="categ" placeholder="">
-          <option value="">1</option>
-          <option value="">2</option>
-          <option value="">3</option>
+        <select type="text" class="form-control" id="categ" aria-describedby="categ" name="categ" placeholder="" required>
+          <?php for ($i=0; $i < count($this->categorias) ; $i++): ?>
+          <option value="<?php echo $this->categorias[$i]['id_seccion'] ?>"><?php echo $this->categorias[$i]['titulo'] ?></option>
+         
+        <?php endfor; ?>
         </select>
         <small id="categ" class="form-text text-muted">seleccione la categoria donde se visualizara la publicacion.</small>
       </div>
-      <div id='carga-img' class="dropzone"></div>  
-      <div class="row form-group">
+      <div class="form-group">
+        <label for="fotos">Fotos</label>
+      <div class="custom-file">
+      
+
+        <input type="file" class="custom-file-input" name="fotos[]" multiple id="fotos"  accept="image/*" required>
+        <label class="custom-file-label" for="fotos">Choose file</label>
+          <small id="categ" class="form-text text-muted">*si selecciona mas de una imagen todas tendran los mismos datos</small>
+          <small id="categ" class="form-text text-muted">* </small>
+      </div>
+        <div id="mini" class="row justify-content-around">
+          
+        </div>
+      </div>
+      
+      <div class="row form-group ">
             <div class="col-md-12">
-                  <input type="button" id="btn_enviar"  value="Enviar" class="btn btn-primary py-2 px-4 text-white">
-                    
+                  <input type="submit" id="btn_enviar"  value="Enviar" class="btn btn-primary py-2 px-4 text-white col-12">
+                  
             </div>
       </div>
       

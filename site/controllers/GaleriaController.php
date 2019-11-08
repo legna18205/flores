@@ -15,11 +15,16 @@ class GaleriaController extends Controller{
 
      $this->_view->_seccion['fotos']=$this->modelo->fotos($this->_view->_seccion['id_seccion']);
     
-      //$this->_view->setJs(array('index'));
-		  //$this->_view->setCss(array('css'));
+      $this->_view->setJs(array('index'));
+		  $this->_view->setCss(array('css'));
        $this->_view->titulo = 'galeria';
 		  $this->_view->renderizar('index');
 	  }	
+    public function eliminar()
+    {
+      
+      $this->modelo->eliminar($_POST['id']);
+    }
 	
 }
 ?>

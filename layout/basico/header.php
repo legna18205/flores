@@ -8,6 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="angel charlot & adel lemuz">
      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     <link rel="shortcut icon" href="<?php echo BASE_URL ?>public/img/logos/logo.ico ?>" mce_href="favicon.ico" type="image/x-icon" />
     <!-- etiqueta meta con el id de google para la utilizacion de el api de logueo-->
    
     <!-- <link rel="shortcut icon" type="image/x-icon" href="<?php echo BASE_URL?>public/img/glipicon.jpg" /> -->
@@ -85,11 +86,11 @@
               <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
               
                 <li class="has-children">
-                  <a href="<?php echo BASE_URL ?>">Secciones</a>
+                  <a >Secciones</a>
                   <ul class="dropdown">
                  
                     <li class="has-children">
-                      <a href="<?php echo BASE_URL ?>">Categorias</a>
+                      <a >Categorias</a>
                       <ul class="dropdown">
                         <?php for ($i=0; $i < count($this->menus) ; $i++): ?>
                         <li><a href="<?php echo BASE_URL; ?>galeria/index/<?php echo $this->menus[$i]['titulo']; ?>"><?php echo $this->menus[$i]['titulo'] ?></a></li>
@@ -135,7 +136,7 @@
                   <a href="https://www.instagram.com/gerberafloreria/" target="_blank" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
                 </li>
                 <li>
-                  <a href="https://www.matrimonios.cl" target="_blank" class="pl-3 pr-3"><span class="icon-pagelines"></span></a>
+                  <a href="https://www.Matrimonios.cl/florerías/gerbera--e134847" target="_blank" class="pl-3 pr-3"><span class="icon-pagelines"></span></a>
                 </li>
                 
               </ul>

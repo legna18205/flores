@@ -1,0 +1,9 @@
+.eliminarr::before {
+	font-family: 'icomoon' !important;
+	font-weight: negrita;
+	color: red;
+	content: "\f00d";
+	position: absolute;
+	right: 23px;
+	cursor: pointer;
+}

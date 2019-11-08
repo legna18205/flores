@@ -14,8 +14,12 @@
     
       </div>
       <div class="row" id="lightgallery">
+        
         <?php for ($i=0; $i < count($this->_seccion['fotos']) ; $i++): ?>
-        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 item" data-aos="fade" data-src="<?php echo BASE_URL.$this->_seccion['fotos'][$i]['grande']; ?>" data-sub-html="<h4>Fading Light</h4><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor doloremque hic excepturi fugit, sunt impedit fuga tempora, ad amet aliquid?</p>">
+        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 item" data-aos="fade" data-src="<?php echo BASE_URL.$this->_seccion['fotos'][$i]['grande']; ?>" data-sub-html="<h4><?php echo $this->_seccion['fotos'][$i]['titulo']; ?></h4><p><?php echo $this->_seccion['fotos'][$i]['descrip']; ?></p>">
+          <?php if (Session::get('autenticado')): ?>
+          <div id="x" data-id="<?php echo $this->_seccion['fotos'][$i]['id_fotos']; ?>" data-seccion="<?php echo $this->_seccion['titulo']; ?>" class="x"><span class="icon-delete"></span></div>
+          <?php endif; ?>
           <a href="#"><img src="<?php echo BASE_URL.$this->_seccion['fotos'][$i]['pequena']; ?>" alt="IMage" class="img-fluid"></a>
         </div>
         <?php endfor; ?>
