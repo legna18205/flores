@@ -22,7 +22,7 @@ class publicarController extends Controller{
 
       $this->getLibrary('simpleimage');
 
-      
+      //print_r($_FILES);
 
       for ($i=0; $i < count($_FILES['fotos']['name']) ; $i++) {      
 

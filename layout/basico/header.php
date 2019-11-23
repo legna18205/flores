@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
-    <meta name="author" content="angel charlot & adel lemuz">
+    <meta name="author" content="angel charlot & adel lemus">
      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
      <link rel="shortcut icon" href="<?php echo BASE_URL ?>public/img/logos/logo.ico ?>" mce_href="favicon.ico" type="image/x-icon" />
     <!-- etiqueta meta con el id de google para la utilizacion de el api de logueo-->
@@ -102,7 +102,7 @@
                 </li>
                 
                 <li><a href="<?php echo BASE_URL ?>nosotros">Nosotros</a></li>
-                <li><a href="<?php echo BASE_URL ?>contacto">contactanos</a></li>
+                <li><a href="<?php echo BASE_URL ?>contacto">Contactanos</a></li>
                  <?php if(Session::get('autenticado')==true):?>
                 <li class="dropdown">
                   <a href="#" class=" dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ADMIN <span class="icon-user"></span></a>

@@ -1,10 +1,10 @@
 <?php
-class GaleriaController extends Controller{
+class galeriaController extends Controller{
 	private $_controlador;
   public $_seccion;
     public function __construct() {
         parent::__construct();
-  	 	$this->modelo=$this->loadModel('Galeria');	
+  	 	$this->modelo=$this->loadModel('galeria');	
     }
 
     public function index($seccion=false){

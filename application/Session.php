@@ -1,11 +1,12 @@
 <?php
-
+ob_start();
 
 class Session
 {
     public static function init()
     {
         session_start();
+        
     }
     
     public static function destroy($clave = false)

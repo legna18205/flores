@@ -19,29 +19,34 @@ class contactoController extends Controller{
 
 
         public function email(){
-    
-            
-    
+    $this->getLibrary('class.phpmailer');
+            //print_r($_POST);
            //configuracion del servidor de correo///
-            $this->getLibrary('class.phpmailer');
+          
             $mail = new PHPMailer();
 
             $mail->IsSMTP(); 
             $mail->CharSet = 'UTF-8';
             $mail->SMTPDebug  = 1;                   
             $mail->SMTPAuth   = true; 
-            $mail->Debugoutput = 'html';
-            $mail->Host = 'smtp.gmail.com';
+            $mail->Debugouput='html';
+            $mail->Host = "mail.floristeriagerbera.com";
             $mail->Port = 587;
             $mail->SMTPSecure = 'tls';
-            $mail->SMTPOptions = array(
-                'ssl' => array('verify_peer' => false,'verify_peer_name' => false,'allow_self_signed' => true)
+           $mail->SMTPOptions= array(
+            'ssl' => array
+                ('verify_peer' => false ,
+                 'verify_peer_name' =>false,
+                 'allo_self_signed'=>true    
+                ) 
             );
             //datos del servidor de email
-            $mail->Username   = "prccnoreply@gmail.com";       
-            $mail->Password   = "20574205";        
-            $mail->SetFrom($_POST["email"]);
-            $mail->AddReplyTo(APP_EMAIL,"Gerbera floreria");
+            $mail->Username   = "gerbera@floristeriagerbera.com";       
+            $mail->Password   = "Xsg162**";
+
+            //$mail->SetFrom(APP_EMAIL);
+            $mail->SetFrom(APP_EMAIL);
+            //$mail->AddReplyTo(APP_EMAIL,"Gerbera floreria");
             //asunto    
             $mail->Subject = $_POST["subject"];
             //mensaje
@@ -68,21 +73,33 @@ class contactoController extends Controller{
 
             $mail->Send();
 
+
+
             $mail2 = new PHPMailer();
             $mail2->IsSMTP(); 
+            $mail2->CharSet = 'UTF-8';
             $mail2->SMTPDebug  = 1;                   
             $mail2->SMTPAuth   = true; 
-            $mail2->SMTPSecure = "tls";               
-            $mail2->Host       = "smtp.gmail.com";
+            $mail2->Debugouput='html';
+            $mail2->Host = "mail.floristeriagerbera.com";
+            $mail2->Port = 587;
+            $mail2->SMTPSecure = 'tls';
+            $mail2->SMTPOptions= array(
+            'ssl' => array
+                ('verify_peer' => false ,
+                 'verify_peer_name' =>false,
+                 'allo_self_signed'=>true    
+                ) 
+            ); 
+            
             //datos del servidor de email
-            $mail2->Username   = "prccnoreply@gmail.com";       
-            $mail2->Password   = "20574205";        
+            $mail2->Username   = "gerbera@floristeriagerbera.com";       
+            $mail2->Password   = "Xsg162**";       
             $mail2->SetFrom(APP_EMAIL);
-            $mail2->AddReplyTo(APP_EMAIL,"Gerbera floreria");
+            //$mail2->AddReplyTo(APP_EMAIL,"Gerbera floreria");
             //asunto    
-            $mail2->Subject = "mensaje a gebera floreria";
+            $mail2->Subject = "Informacion de tu peticion gerbera floreria";
             //mensaje
-            $mail2->Body = "Gracias por escribirnos nuestros ejecutivos de ventas se comunicaran con usted a la brevedad";
 
             $mensaje2 = '<html>'.
             '<head><title>Correo</title></head>'.
@@ -99,7 +116,7 @@ class contactoController extends Controller{
 
 
             $mail2->Body = $mensaje2;
-            $mail2->AddAddress($_POST["email"]);
+            $mail2->AddAddress($_POST['email']);
             $mail2->IsHTML(true);
             $mail2->Send();
 

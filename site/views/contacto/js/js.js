@@ -16,7 +16,7 @@ $(document).ready(function(){
 			console.log(textStatus);
 			console.log(xhr);
 			if (textStatus) {
-				window.location=base_url;
+				//window.location=base_url;
 			}
 		});
 	});

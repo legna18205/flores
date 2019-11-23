@@ -11,6 +11,7 @@ class loginController extends Controller{
         if(Session::get('autenticado')){
             $this->redireccionar('principal');
         }
+            
         
         $this->_view->titulo = 'Iniciar Sesion';
         $this->_view->setJs(array('js','login'));

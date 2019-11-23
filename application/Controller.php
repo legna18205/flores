@@ -1,13 +1,6 @@
 <?php
 
-/*
- * -------------------------------------
- * www.dlancedu.com | Jaisiel Delance
- * framework mvc basico
- * Controller.php
- * -------------------------------------
- */
-
+ob_start();
 
 abstract class Controller
 {
@@ -65,15 +58,19 @@ abstract class Controller
     
    
     
-    protected function redireccionar($ruta = false)
-    {
+    protected function redireccionar($ruta = false){
+
+       print_r(header_remove());
+       print_r(headers_list());
+  
+       
         if($ruta){
             header('location:' . BASE_URL . $ruta);
-            exit;
+            
         }
         else{
             header('location:' . BASE_URL);
-            exit;
+           
         }
     }
 

@@ -65,14 +65,14 @@ $( document ).on( "click", "#cambiarclave", function() {
 		
 				if(!datos){
 
-
+					alert("error de autentificacion, verifique e intente nuevamente...");
 					
 				}
 				else {
 			
 						$.post(base_url + 'recuperar/cambiarclave','actual='+$("#actual").val()+ '&nueva='+$("#nueva").val(), function(){
-							alertify.success("Clave cambiada exitosamente");
-								javascript:history.back()
+							alert("clave modificada correctamente");
+							javascript:history.back()
 
 					}); }
 		
@@ -85,7 +85,7 @@ $( document ).on( "click", "#cambiarclave", function() {
 
 	else {
 
-			alertify.alert("las contraseñas no coinciden");
+			alert("las claves no coinciden...")
 
 			
 			}	
