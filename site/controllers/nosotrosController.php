@@ -13,7 +13,7 @@ class nosotrosController extends Controller{
     
       //$this->_view->setJs(array('index'));
 		  //$this->_view->setCss(array('css'));
-       $this->_view->titulo = 'about';
+       $this->_view->titulo = 'Nosotros';
 		  $this->_view->renderizar('index');
 	  }	
 	

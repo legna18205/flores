@@ -12,7 +12,7 @@ class principalController extends Controller{
       $this->_view->_seccion=$this->_principal->secciones();
       $this->_view->setJs(array('index'));
 		  //$this->_view->setCss(array('css'));
-       $this->_view->titulo = 'index';
+       $this->_view->titulo = 'Gerbera';
 		  $this->_view->renderizar('index');
 	  }	
 	

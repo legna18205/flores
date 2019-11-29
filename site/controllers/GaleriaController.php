@@ -17,7 +17,7 @@ class galeriaController extends Controller{
     
       $this->_view->setJs(array('index'));
 		  $this->_view->setCss(array('css'));
-       $this->_view->titulo = 'galeria';
+       $this->_view->titulo = ''.$seccion;
 		  $this->_view->renderizar('index');
 	  }	
     public function eliminar()
